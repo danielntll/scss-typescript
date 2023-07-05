@@ -1,0 +1,195 @@
+.Button{
+  @extend %button;
+
+  // TYPES ------------------
+  //-- Fill 
+  &.fill{
+    &_primary {
+      background-color: $color-primary;
+      color :$color-primary-contrast;
+    }
+    &_secondary {
+      background-color: $color-secondary;
+      color :$color-secondary-contrast;
+    }  
+    &_tertiary {
+      background-color: $color-tertiary;
+      color :$color-tertiary-contrast;
+    }  
+    &_success {
+      background-color: $color-success;
+      color :$color-success-contrast;
+    }  
+    &_warning {
+      background-color: $color-warning;
+      color :$color-warning-contrast;
+    }  
+    &_danger {
+      background-color: $color-danger;
+      color :$color-danger-contrast;
+    }  
+    &_medium {
+      background-color: $color-medium;
+      color :$color-medium-contrast;
+    }  
+    &_dark {
+      background-color: $color-dark;
+      color :$color-danger-contrast;
+    }  
+    &_light {
+      background-color: $color-light;
+      color :$color-light-contrast;
+    }    
+  }
+  //-- outline
+  &.outline{
+    &_primary {
+      border: $border-width solid $color-primary;
+      color :$color-primary;
+    }
+    &_secondary {
+      border: $border-width solid $color-secondary;
+      color :$color-secondary;
+    }  
+    &_tertiary {
+      border: $border-width solid $color-tertiary;
+      color :$color-tertiary;
+    }  
+    &_success {
+      border: $border-width solid $color-success;
+      color :$color-success;
+    }  
+    &_warning {
+      border: $border-width solid $color-success;
+      color :$color-warning;
+    }  
+    &_danger {
+      border: $border-width solid $color-success;
+      color :$color-danger;
+    }  
+    &_medium {
+      border: $border-width solid $color-success;
+      color :$color-medium;
+    }  
+    &_dark {
+      border: $border-width solid $color-success;
+      color :$color-danger;
+    }  
+    &_light {
+      border: $border-width solid $color-success;
+      color :$color-light;
+    } 
+  } 
+  //-- underline
+  &.underline{
+    &_primary {
+      border-bottom: $border-width solid $color-primary;
+      color :$color-primary;
+    }
+    &_secondary {
+      border: $border-width solid $color-secondary;
+      color :$color-secondary;
+    }  
+    &_tertiary {
+      border: $border-width solid $color-tertiary;
+      color :$color-tertiary;
+    }  
+    &_success {
+      border: $border-width solid $color-success;
+      color :$color-success;
+    }  
+    &_warning {
+      background-color: $color-warning;
+      color :$color-warning;
+    }  
+    &_danger {
+      background-color: $color-danger;
+      color :$color-danger;
+    }  
+    &_medium {
+      background-color: $color-medium;
+      color :$color-medium;
+    }  
+    &_dark {
+      background-color: $color-dark;
+      color :$color-danger;
+    }  
+    &_light {
+      background-color: $color-light;
+      color :$color-light;
+    } 
+  } 
+  // Colors ----------------
+ 
+  &.secondary {
+    background-color: $color-secondary;
+    color :$color-secondary-contrast;
+  }  
+  &.tertiary {
+    background-color: $color-tertiary;
+    color :$color-tertiary-contrast;
+  }  
+  &.success {
+    background-color: $color-success;
+    color :$color-success-contrast;
+  }  
+  &.warning {
+    background-color: $color-warning;
+    color :$color-warning-contrast;
+  }  
+  &.danger {
+    background-color: $color-danger;
+    color :$color-danger-contrast;
+  }  
+  &.medium {
+    background-color: $color-medium;
+    color :$color-medium-contrast;
+  }  
+  &.dark {
+    background-color: $color-dark;
+    color :$color-danger-contrast;
+  }  
+  &.light {
+    background-color: $color-light;
+    color :$color-light-contrast;
+  }  
+ 
+  // Directions ------------
+  &.left{
+    flex-direction: row;
+  }
+  &.right{
+    flex-direction: row-reverse;
+  }
+
+  // Sizes -----------------
+  &.xs{
+    @extend %button__xs;
+  }
+  &.sm{
+    @extend %button__sm;
+  }
+  &.md{
+    @extend %button__md;
+  }
+  &.lg{
+    @extend %button__lg;
+  }
+  &.xl{
+    @extend %button__xl;
+  }
+
+  // Shapes ----------------
+  &.round {
+    border-radius: $border-radius-round $border-radius-round $border-radius-round $border-radius-round;
+  }
+  &.default {
+    border-radius: $border-radius-default;
+  }
+  &.light {
+    border-radius: $border-radius-light;
+  }
+  &.square {
+    border-radius: $border-radius-square;
+  }
+}

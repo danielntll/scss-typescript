@@ -1,0 +1,27 @@
+// BODY ----------------
+%body__init {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 50vh;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+%section__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+}
+// BUTTONS -------------
+%button__display {
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  @extend %button__font; // ---> fonts/fonts
+}
