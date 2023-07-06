@@ -14,4 +14,10 @@
       @extend %section__row; //---> layout / displays
     }
   }
+
+  .App__form{
+    display: flex;
+    
+    gap:$gap;
+  }
 }

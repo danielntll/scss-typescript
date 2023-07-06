@@ -9,23 +9,27 @@ type ButtonTypes = "fill" | "outline" | "underline" | "text";
 
 interface ComponentProps {
   size: tSize,
-  text: string,
+  text?: string,
   shape: tShape,
-  icon?: (() => JSX.Element) | JSX.Element | JSX.Element[] | any, //any perchè considera il componente come non chiamabile tramite funzione, funziona anche senza ma da un error;
+  submit?: boolean,
+  icon?: (iconSize: number | string) => JSX.Element, //any perchè considera il componente come non chiamabile tramite funzione, funziona anche senza ma da un error;
   direction?: "left" | "right",
   color?: tColor,
   type?: ButtonTypes,
+  onClick: () => void,
 }
 
 const Button: React.FC<ComponentProps> = (
   {
     size = "xl",
-    text = "Button",
-    shape = "round",
-    icon = (size: number | string) => <IoChevronForward size={size} />,
-    direction = "left",
+    text = "",
+    shape = "default",
+    submit = false,
+    icon = (iconSize: number | string) => { return <IoChevronForward size={iconSize} /> },
+    direction = "right",
     color = "primary",
     type = "fill",
+    onClick = () => { console.log("Click") },
   }
 ) => {
   // VARIABLES ----------------------
@@ -33,11 +37,13 @@ const Button: React.FC<ComponentProps> = (
   // FUNCTIONS ----------------------
   // RETURN -------------------------
   return (
-    <div
+    <button
+      onClick={onClick}
+      type={submit ? "submit" : "button"}
       className={`
         ${styles.Button} 
         ${styles[size]}
-        ${styles[type !== "underline" ? shape : "square"]}
+        ${styles[type !== "underline" && type !== "text" ? shape : "square"]}
         ${styles[direction]}
         ${styles[type + "_" + color]}
       `}>
@@ -49,7 +55,7 @@ const Button: React.FC<ComponentProps> = (
         :
         null
       }
-    </div>
+    </button>
   );
 }
 
