@@ -1,0 +1,205 @@
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+
+  &.sm{
+    transform: scale(0.8);
+  }
+  &.md{
+    transform: scale(1);
+  }
+  &.lg{
+    transform: scale(1.2);
+  }
+
+
+  & input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ .checkmark {
+      background-color: transparent;
+        &.primary {
+          border: 2px solid  $color-primary;
+        }
+        &.secondary {
+          border: 2px solid  $color-secondary;
+        }  
+        &.tertiary {
+          border: 2px solid  $color-tertiary;
+        }  
+        &.success {
+          border: 2px solid  $color-success;
+        }  
+        &.warning {
+          border: 2px solid  $color-warning;
+        }  
+        &.danger {
+          border: 2px solid  $color-danger;
+        }  
+        &.dark {
+          border: 2px solid  $color-dark;
+        }  
+        &.medium {
+          border: 2px solid  $color-medium;
+        }  
+        &.light {
+          border: 2px solid  $color-light;
+        } 
+    }
+
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+    
+  }
+
+  .primary {
+    &.checkmark:after {
+      top: 5px;
+      left: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color:  $color-primary;
+   }
+  }
+  .secondary {
+    &.checkmark:after {
+      top: 5px;
+      left: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color:  $color-secondary;
+   }
+  }  
+  .tertiary {
+    &.checkmark:after {
+      top: 5px;
+      left: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color:  $color-tertiary;
+   }
+  }  
+  .success {
+    &.checkmark:after {
+      top: 5px;
+      left: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color:  $color-success;
+   }
+  }  
+  .warning {
+    &.checkmark:after {
+      top: 5px;
+      left: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color:  $color-warning;
+   }
+  }  
+  .danger {
+    &.checkmark:after {
+      top: 5px;
+      left: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color:  $color-danger;
+   }
+  }  
+  .medium {
+    &.checkmark:after {
+      top: 5px;
+      left: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color:  $color-medium;
+   }
+  }  
+  .dark {
+    &.checkmark:after {
+      top: 5px;
+      left: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color:  $color-dark;
+   }
+  }  
+  .light {
+    &.checkmark:after {
+      top: 5px;
+      left: 5px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color:  $color-light;
+   }
+  } 
+
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border-radius: 50%;
+
+  &.primary {
+    border: 2px solid  $color-primary;
+  }
+  &.secondary {
+    border: 2px solid  $color-secondary;
+  }  
+  &.tertiary {
+    border: 2px solid  $color-tertiary;
+  }  
+  &.success {
+    border: 2px solid  $color-success;
+  }  
+  &.warning {
+    border: 2px solid  $color-warning;
+  }  
+  &.danger {
+    border: 2px solid  $color-danger;
+  }  
+  &.dark {
+    border: 2px solid  $color-dark;
+  }  
+  &.medium {
+    border: 2px solid  $color-medium;
+  }  
+  &.light {
+    border: 2px solid  $color-light;
+  } 
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+}
+
+

@@ -5,154 +5,124 @@
   //-- Fill 
   &.fill{
     &_primary {
-      background-color: $color-primary;
-      color :$color-primary-contrast;
+     @include containerType("fill", $color-primary, $color-primary-contrast);
     }
     &_secondary {
-      background-color: $color-secondary;
-      color :$color-secondary-contrast;
+      @include containerType("fill", $color-secondary, $color-secondary-contrast);
     }  
     &_tertiary {
-      background-color: $color-tertiary;
-      color :$color-tertiary-contrast;
+      @include containerType("fill", $color-tertiary, $color-tertiary-contrast);
     }  
     &_success {
-      background-color: $color-success;
-      color :$color-success-contrast;
+      @include containerType("fill", $color-success, $color-success-contrast);
     }  
     &_warning {
-      background-color: $color-warning;
-      color :$color-warning-contrast;
+      @include containerType("fill", $color-warning, $color-warning-contrast);
     }  
     &_danger {
-      background-color: $color-danger;
-      color :$color-danger-contrast;
+      @include containerType("fill", $color-danger, $color-danger-contrast);
     }  
     &_medium {
-      background-color: $color-medium;
-      color :$color-medium-contrast;
+      @include containerType("fill", $color-medium, $color-medium-contrast);
     }  
     &_dark {
-      background-color: $color-dark;
-      color :$color-danger-contrast;
+      @include containerType("fill", $color-dark, $color-dark-contrast);
     }  
     &_light {
-      background-color: $color-light;
-      color :$color-light-contrast;
+      @include containerType("fill", $color-light, $color-light-contrast);
     }    
   }
   //-- outline
   &.outline{
     &_primary {
-      border: $border-width solid $color-primary;
-      color :$color-primary;
+      @include containerType("outline", $color-primary, $color-primary-contrast);
     }
     &_secondary {
-      border: $border-width solid $color-secondary;
-      color :$color-secondary;
+      @include containerType("outline", $color-secondary, $color-secondary-contrast);
     }  
     &_tertiary {
-      border: $border-width solid $color-tertiary;
-      color :$color-tertiary;
+      @include containerType("outline", $color-tertiary, $color-tertiary-contrast);
     }  
     &_success {
-      border: $border-width solid $color-success;
-      color :$color-success;
+      @include containerType("outline", $color-success, $color-success-contrast);
     }  
     &_warning {
-      border: $border-width solid $color-success;
-      color :$color-warning;
+      @include containerType("outline", $color-warning, $color-warning-contrast);
     }  
     &_danger {
-      border: $border-width solid $color-success;
-      color :$color-danger;
+      @include containerType("outline", $color-danger, $color-danger-contrast);
     }  
     &_medium {
-      border: $border-width solid $color-success;
-      color :$color-medium;
+      @include containerType("outline", $color-medium, $color-medium-contrast);
     }  
     &_dark {
-      border: $border-width solid $color-success;
-      color :$color-danger;
+      @include containerType("outline", $color-danger, $color-danger-contrast);
     }  
     &_light {
-      border: $border-width solid $color-success;
-      color :$color-light;
+      @include containerType("outline", $color-light, $color-light-contrast);
     } 
   } 
   //-- underline
   &.underline{
     &_primary {
-      border-bottom: $border-width solid $color-primary;
-      color :$color-primary;
+      @include containerType("underline", $color-primary, $color-primary-contrast);
     }
     &_secondary {
-      border: $border-width solid $color-secondary;
-      color :$color-secondary;
+      @include containerType("underline", $color-secondary, $color-secondary-contrast);
     }  
     &_tertiary {
-      border: $border-width solid $color-tertiary;
-      color :$color-tertiary;
+      @include containerType("underline", $color-tertiary, $color-tertiary-contrast);
     }  
     &_success {
-      border: $border-width solid $color-success;
-      color :$color-success;
+      @include containerType("underline", $color-success, $color-success-contrast);
     }  
     &_warning {
-      background-color: $color-warning;
-      color :$color-warning;
+      @include containerType("underline", $color-warning, $color-warning-contrast);
     }  
     &_danger {
-      background-color: $color-danger;
-      color :$color-danger;
+      @include containerType("underline", $color-danger, $color-danger-contrast);
     }  
     &_medium {
-      background-color: $color-medium;
-      color :$color-medium;
+      @include containerType("underline", $color-medium, $color-medium-contrast);
     }  
     &_dark {
-      background-color: $color-dark;
-      color :$color-danger;
+      @include containerType("underline", $color-danger, $color-danger-contrast);
     }  
     &_light {
-      background-color: $color-light;
-      color :$color-light;
+      @include containerType("underline", $color-light, $color-light-contrast);
     } 
   } 
-  // Colors ----------------
- 
-  &.secondary {
-    background-color: $color-secondary;
-    color :$color-secondary-contrast;
-  }  
-  &.tertiary {
-    background-color: $color-tertiary;
-    color :$color-tertiary-contrast;
-  }  
-  &.success {
-    background-color: $color-success;
-    color :$color-success-contrast;
-  }  
-  &.warning {
-    background-color: $color-warning;
-    color :$color-warning-contrast;
-  }  
-  &.danger {
-    background-color: $color-danger;
-    color :$color-danger-contrast;
-  }  
-  &.medium {
-    background-color: $color-medium;
-    color :$color-medium-contrast;
-  }  
-  &.dark {
-    background-color: $color-dark;
-    color :$color-danger-contrast;
-  }  
-  &.light {
-    background-color: $color-light;
-    color :$color-light-contrast;
-  }  
+  //-- text
+  &.text{
+    &_primary {
+      @include containerType("text", $color-primary, $color-primary-contrast);
+    }
+    &_secondary {
+      @include containerType("text", $color-secondary, $color-secondary-contrast);
+    }  
+    &_tertiary {
+      @include containerType("text", $color-tertiary, $color-tertiary-contrast);
+    }  
+    &_success {
+      @include containerType("text", $color-success, $color-success-contrast);
+    }  
+    &_warning {
+      @include containerType("text", $color-warning, $color-warning-contrast);
+    }  
+    &_danger {
+      @include containerType("text", $color-danger, $color-danger-contrast);
+    }  
+    &_medium {
+      @include containerType("text", $color-medium, $color-medium-contrast);
+    }  
+    &_dark {
+      @include containerType("text", $color-danger, $color-danger-contrast);
+    }  
+    &_light {
+      @include containerType("text", $color-light, $color-light-contrast);
+    } 
+  } 
+
  
   // Directions ------------
   &.left{

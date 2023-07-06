@@ -1,0 +1,133 @@
+.switch{
+  
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+
+  & input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+   // Sizes -----------------
+  &.sm{
+    transform: scale(0.8);
+  }
+  &.md{
+    transform: scale(1);
+  }
+  &.lg{
+    transform: scale(1.2);
+  }
+
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: $animationSpeed;
+  transition: $animationSpeed;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: $animationSpeed;
+    transition: $animationSpeed;
+  }
+
+  &.round {
+    border-radius: 34px;
+  }
+
+  &:before {
+    border-radius: 50%;
+  }
+}
+
+input {
+  &:checked {
+    + .slider{
+      &.primary {
+        background-color:  $color-primary;
+      }
+      &.secondary {
+        background-color:  $color-secondary;
+      }  
+      &.tertiary {
+        background-color:  $color-tertiary;
+      }  
+      &.success {
+        background-color:  $color-success;
+      }  
+      &.warning {
+        background-color:  $color-warning;
+      }  
+      &.danger {
+        background-color:  $color-danger;
+      }  
+      &.medium {
+        background-color:  $color-dark;
+      }  
+      &.dark {
+        background-color:  $color-medium;
+      }  
+      &.light {
+        background-color:  $color-light;
+      } 
+    }
+  }
+
+  &:focus {
+    &.slider{
+      &_primary {
+        box-shadow: 0 0 1px $color-primary;
+      }
+      &_secondary {
+        box-shadow: 0 0 1px $color-secondary;
+      }  
+      &_tertiary {
+        box-shadow: 0 0 1px $color-tertiary;
+      }  
+      &_success {
+        box-shadow: 0 0 1px $color-success;
+      }  
+      &_warning {
+        box-shadow: 0 0 1px $color-warning;
+      }  
+      &_danger {
+        box-shadow: 0 0 1px $color-danger;
+      }  
+      &_medium {
+        box-shadow: 0 0 1px $color-dark;
+      }  
+      &_dark {
+        box-shadow: 0 0 1px $color-medium;
+      }  
+      &_light {
+        box-shadow: 0 0 1px $color-light;
+      } 
+    } 
+  }
+
+  &:checked {
+    + .slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+  }
+  
+}
+

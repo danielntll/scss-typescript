@@ -1,12 +1,16 @@
 // Defaull config --------------
 %button{
+  border: 0;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   gap:10px;
   cursor: pointer;
+  transition: color $animationSpeed $animationType, 
+  background-color $animationSpeed $animationType,
+  box-shadow $animationSpeed $animationType;
 }
-
 
 // Sizes -----------------------
 %button__xs {

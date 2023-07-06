@@ -1,0 +1,286 @@
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+
+  &.sm{
+    transform: scale(0.8);
+  }
+  &.md{
+    transform: scale(1);
+  }
+  &.lg{
+    transform: scale(1.2);
+  }
+
+  & input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    
+    &:checked ~ .checkmark {
+      &.fill{
+        &.primary {
+          background-color:  $color-primary;
+        }
+        &.secondary {
+          background-color:  $color-secondary;
+        }  
+        &.tertiary {
+          background-color:  $color-tertiary;
+        }  
+        &.success {
+          background-color:  $color-success;
+        }  
+        &.warning {
+          background-color:  $color-warning;
+        }  
+        &.danger {
+          background-color:  $color-danger;
+        }  
+        &.medium {
+          background-color:  $color-dark;
+        }  
+        &.dark {
+          background-color:  $color-medium;
+        }  
+        &.light {
+          background-color:  $color-light;
+        } 
+      }
+      &.outline{
+        background-color: transparent;
+        &.primary {
+          border: 2px solid  $color-primary;
+        }
+        &.secondary {
+          border: 2px solid  $color-secondary;
+        }  
+        &.tertiary {
+          border: 2px solid  $color-tertiary;
+        }  
+        &.success {
+          border: 2px solid  $color-success;
+        }  
+        &.warning {
+          border: 2px solid  $color-warning;
+        }  
+        &.danger {
+          border: 2px solid  $color-danger;
+        }  
+        &.dark {
+          border: 2px solid  $color-dark;
+        }  
+        &.medium {
+          border: 2px solid  $color-medium;
+        }  
+        &.light {
+          border: 2px solid  $color-light;
+        } 
+      }
+      
+    }
+
+    &:checked ~ .checkmark:after {
+      display: block;
+      
+    }
+  }
+
+
+  &.fill{
+    .checkmark:after {
+      left: 10px;
+      top: 6px;
+      width: 5px;
+      height: 10px; 
+      border: solid #fff;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+  &.outline{
+    
+    .primary{
+      &.checkmark:after {
+        left: 10px;
+        top: 6px;
+        width: 5px;
+        height: 10px; 
+        border: solid $color-primary;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    
+    .secondary{
+      &.checkmark:after {
+        left: 10px;
+        top: 6px;
+        width: 5px;
+        height: 10px; 
+        border: solid $color-secondary;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    
+    .tertiary{
+      &.checkmark:after {
+        left: 10px;
+        top: 6px;
+        width: 5px;
+        height: 10px; 
+        border: solid $color-tertiary;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    
+    .success{
+      &.checkmark:after {
+        left: 10px;
+        top: 6px;
+        width: 5px;
+        height: 10px; 
+        border: solid $color-success;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    
+    .danger{
+      &.checkmark:after {
+        left: 10px;
+        top: 6px;
+        width: 5px;
+        height: 10px; 
+        border: solid $color-danger;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    .warning{
+      &.checkmark:after {
+        left: 10px;
+        top: 6px;
+        width: 5px;
+        height: 10px; 
+        border: solid $color-warning;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    .light{
+      &.checkmark:after {
+        left: 10px;
+        top: 6px;
+        width: 5px;
+        height: 10px; 
+        border: solid $color-light;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    .medium{
+      &.checkmark:after {
+        left: 10px;
+        top: 6px;
+        width: 5px;
+        height: 10px; 
+        border: solid $color-medium;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    .dark{
+      &.checkmark:after {
+        left: 10px;
+        top: 6px;
+        width: 5px;
+        height: 10px; 
+        border: solid $color-dark;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+    
+  }
+}
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 27px;
+  width: 27px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: all $animationSpeed $animationType;
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  &.outline{
+    background-color: transparent;
+    &.primary {
+      border: 2px solid  $color-primary;
+    }
+    &.secondary {
+      border: 2px solid  $color-secondary;
+    }  
+    &.tertiary {
+      border: 2px solid  $color-tertiary;
+    }  
+    &.success {
+      border: 2px solid  $color-success;
+    }  
+    &.warning {
+      border: 2px solid  $color-warning;
+    }  
+    &.danger {
+      border: 2px solid  $color-danger;
+    }  
+    &.dark {
+      border: 2px solid  $color-dark;
+    }  
+    &.medium {
+      border: 2px solid  $color-medium;
+    }  
+    &.light {
+      border: 2px solid  $color-light;
+    } 
+  }
+}
