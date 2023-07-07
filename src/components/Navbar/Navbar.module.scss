@@ -1,0 +1,36 @@
+%flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Navbar {
+  @extend %flex;
+  width: calc(100vw - 104px);
+  position: fixed;
+  top: 0;
+  padding: 19px 52px;
+  background-color: aqua;
+  justify-content: space-between;
+
+  .Navbar__sx {
+    @extend %flex;
+
+    .Navbar__logo__container {
+      width: 155px;
+      height: 30px;
+      background-color: aquamarine;
+      cursor: pointer;
+    }
+  }
+  .Navbar__center {
+    @extend %flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .Navbar__dx {
+    @extend %flex;
+    justify-content: center;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,23 @@
+@import "./scss/layout/columns.scss";
+@import "./scss/layout/displays.scss";
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+
+  .App__container {
+    padding: $containerPadding;
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    .App__section {
+      @extend %section__row; //---> layout / displays
+    }
+  }
+
+  .App__form {
+    display: flex;
+
+    gap: $gap;
+  }
+}

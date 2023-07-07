@@ -1,15 +1,16 @@
+import * as React from "react";
 import { tColor } from "../../types/tColor";
 import { tSizeShort } from "../../types/tSize";
 import styles from "./Radio.module.scss";
 
 interface ComponentProps {
-  isActive: boolean,
-  setActive: (val: boolean) => void,
-  name: string,
-  value: string,
-  color?: tColor,
-  disabled?: boolean,
-  size?: tSizeShort,
+  isActive: boolean;
+  setActive: (val: boolean) => void;
+  name: string;
+  value: string;
+  color?: tColor;
+  disabled?: boolean;
+  size?: tSizeShort;
 }
 
 const Radio: React.FC<ComponentProps> = ({
@@ -26,10 +27,9 @@ const Radio: React.FC<ComponentProps> = ({
   // FUNCTIONS ----------------------
   const handleToggle = () => {
     setActive(!isActive);
-  }
+  };
   // RETURN -------------------------
   return (
-
     <label
       className={`
         ${styles.container}
@@ -45,14 +45,15 @@ const Radio: React.FC<ComponentProps> = ({
         value={value}
         disabled={disabled}
       />
-      <span className={`
+      <span
+        className={`
         ${styles.checkmark}
         ${styles[color]}
       
-      `}></span>
+      `}
+      ></span>
     </label>
-
   );
-}
+};
 
 export default Radio;
